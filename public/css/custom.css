@@ -1,0 +1,26 @@
+.col-md-12{
+    padding: 0;
+}
+.startRow{
+  font-family: 'Pacifico', cursive !important;
+}
+.start{
+  font-family: 'Pacifico', cursive !important;
+}  
+  
+  
+  .location-row{
+    margin-bottom: 45px !important;
+  }
+  .location{
+    font-family: 'Kosugi', sans-serif !important;
+
+  }
+  .ownerRow{
+    margin-top: 20px;
+  }
+ .buildingSpesific{
+   margin-top: 20px;
+   margin-bottom: 50px;
+   font-family: 'Merienda', cursive;
+ }
