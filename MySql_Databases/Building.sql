@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 02, 2018 at 12:00 PM
+-- Generation Time: Sep 09, 2018 at 08:58 AM
 -- Server version: 10.1.26-MariaDB-0+deb9u1
--- PHP Version: 5.6.33-0+deb8u1
+-- PHP Version: 5.6.37-1+0~20180725093819.2+stretch~1.gbp606419
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -41,7 +41,7 @@ CREATE TABLE `owners` (
 --
 
 INSERT INTO `owners` (`id`, `ownerName`, `ownerSurname`, `ownerPassword`, `ownerEmail`, `ownerPhone`, `ownerSecondphone`) VALUES
-(1, 'gepettox', 'fadsfasd', 'f=mx+d123', 'fmdndr0@gmail.com', 'daf123', 'asdşkflj123'),
+(1, 'gepettox', 'fadsfasd', 'f=mx+d123', 'fmdxndr0@gmail.com', 'daf123', 'asdşkflj123'),
 (3, 'fatih mahmut ', 'dundar ', 'fmdndr12345', 'fmdndr0@gmail.com', '+905394015439', '+905394015439');
 
 -- --------------------------------------------------------
@@ -64,18 +64,18 @@ CREATE TABLE `rental` (
   `numberOfsmallRestrooms` int(25) DEFAULT NULL,
   `kindOfkitchen` varchar(150) COLLATE utf8_turkish_ci DEFAULT NULL,
   `maxStay` int(55) DEFAULT NULL,
-  `parking` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `poool` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `pets` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `blankets` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `tv` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `fridge` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `microvawe` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `aircondition` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `washmachine` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `dryer` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `dishwasher` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL,
-  `wifi` varchar(50) COLLATE utf8_turkish_ci DEFAULT NULL
+  `parking` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0',
+  `poool` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0',
+  `pets` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0',
+  `blankets` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0',
+  `tv` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0',
+  `fridge` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0',
+  `microvawe` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0',
+  `aircondition` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0',
+  `washmachine` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0',
+  `dryer` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0',
+  `dishwasher` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0',
+  `wifi` varchar(1) COLLATE utf8_turkish_ci DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
@@ -83,14 +83,12 @@ CREATE TABLE `rental` (
 --
 
 INSERT INTO `rental` (`id`, `owner_id`, `country`, `city`, `region`, `typeOfbuilding`, `typeOffloor`, `surfacem2`, `numberOfbedRooms`, `numberOfrestrooms`, `numberOfsmallRestrooms`, `kindOfkitchen`, `maxStay`, `parking`, `poool`, `pets`, `blankets`, `tv`, `fridge`, `microvawe`, `aircondition`, `washmachine`, `dryer`, `dishwasher`, `wifi`) VALUES
-(2, 2, 'spain ', 'granada ', 'campo del mayo', 'flat', 'lamine', 65, 4, 5, 6, 'american', 6, 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', '', 'yes', 'yes', '', 'yes'),
-(9, 3, 'germany', 'duseldorf', 'z123', 'apartment', 'lamine', 65, 4, 5, 5, 'american', 6, 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
-(10, 0, 'germany', 'duseldorf', 'z123', 'aparment', 'lamine', 65, 4, 5, 5, 'american', 6, 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
-(11, 0, 'germany', 'duseldorf', ' z123456', 'apartment', 'lamine', 89, 4, 5, 5, 'american', 6, 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
-(12, 0, 'zimbave', 'burundi', 'chad', 'apartment', 'lamine', 165, 4, 5, 5, 'folklorik', 6, 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
-(13, 0, 'lishteshsitain', 'luxemburg', 'zon1', 'dormitory', 'lamine', 85, 1, 2, 5, 'american', 8, 'yes', 'no', 'yes', 'no', 'yes', 'no', 'yes', 'no', 'yes', 'no', 'yes', 'no'),
-(14, 1, 'germany', 'hamburg', 'zon2', 'apartment', 'lamine', 65, 5, 5, 5, 'american', 6, 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes'),
-(15, 3, 'litvanya ', 'rijkbourg', 'dunkrik', 'apartment', 'lamine', 65, 4, 4, 5, 'american', 6, 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes', 'yes');
+(18, 1, 'norway', 'zurih', '', '', '', 0, 0, 0, 0, '', 0, '', '', 'o', '', '', 'o', 'o', '', '', 'o', '', ''),
+(19, 1, 'finland', 'tolay', '12', '', '', 0, 0, 0, 0, '', 0, '0', '1', '0', '0', '0', '1', '0', '1', '1', '0', '0', '0'),
+(20, 1, 'lithuania', 'capital', '', '', '', 0, 0, 0, 0, '', 0, '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0'),
+(21, 1, 'letonya', 'Central', '', '', '', 0, 0, 0, 0, '', 0, '0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '1'),
+(22, 1, 'brukinaFaso', 'brukundi', '123', '', '', 0, 0, 0, 0, '', 0, '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1'),
+(23, 1, 'germany', 'duseldorf', 'z123', 'apartment', 'lamine', 89, 8, 9, 9, 'american', 6, '1', '1', '1', '1', '1', '1', '0', '0', '0', '0', '0', '1');
 
 --
 -- Indexes for dumped tables
@@ -122,7 +120,7 @@ ALTER TABLE `owners`
 -- AUTO_INCREMENT for table `rental`
 --
 ALTER TABLE `rental`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
